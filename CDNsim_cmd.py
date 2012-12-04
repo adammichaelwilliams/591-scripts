@@ -82,7 +82,6 @@ def main(argv):
 
 		#Page2
 		options.linkSpeed = 1000
-		options.routersGraphFile = "/CDNsim/CDNsim/CDNsimdoc/sample_data/step2/random50"
 		options.clients = 100
 		options.surrogates = 1	
 		options.origins = 1 
@@ -93,24 +92,28 @@ def main(argv):
 		options.nRetries = 10 
 		options.mean = 5 
 
-		#Page3
-		options.traffic = "/CDNsim/591repo/InputGen/traffic.in"
-		options.objects = "/CDNsim/591repo/InputGen/website.in"
-
 		#page4
-		options.placement = "/CDNsim/591repo/InputGen/placement.in"
-		options.placementDir = "/CDNsim/591repo/InputGen"
 		options.shrink = False
 
-		#page5
-		options.cdnsim2Dir = "/CDNsim/CDNsim/CDNsimlib"
-		options.inetDir = "/CDNsim/INET-20061020"
-		options.omnetppDir = "/CDNsim/omnetpp-3.3p1"
+	options.routersGraphFile = os.getcwd()+"/CDNsim/CDNsimdoc/sample_data/step2/as3037"
+	#Page3
+	options.traffic = os.getcwd()+"/591repo/InputGen/traffic.in"
+	options.objects = os.getcwd()+"/591repo/InputGen/website.in"
+
+	#page4
+	options.placement = os.getcwd()+"/591repo/InputGen/placement.in"
+	options.placementDir = os.getcwd()+"/591repo/InputGen"
+
+	#page5
+	options.cdnsim2Dir = os.getcwd()+"/CDNsim/CDNsimlib"
+	options.inetDir = os.getcwd()+"/INET-20061020"
+	options.omnetppDir = os.getcwd()+"/omnetpp-3.3p1"
 
 	#set output directory
-	options.outputDir = "/CDNsim/output/" + bottleName
-	if not os.path.exists(options.outputDir):
-		os.mkdir(options.outputDir)
+	print os.getcwd()
+	options.outputDir = os.getcwd()+"/output/" + bottleName
+	#if not os.path.exists(options.outputDir):
+	#	os.mkdir(options.outputDir)
 	options.bottleName = argv[1]
 
 	BottleBuilder.buildBottle("fake", options)

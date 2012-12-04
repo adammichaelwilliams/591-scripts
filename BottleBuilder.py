@@ -18,7 +18,6 @@ import os
 import re
 import random
 import math
-import wx
 
 
 class BottleAttributes:

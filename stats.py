@@ -28,7 +28,7 @@ def buildObjectsReference(objects):
 	try:
 		fin = open(objects, 'r')
 	except:
-		sys.exit("Error: While opening file <" + objects + ">")
+		sys.exit("Error3: While opening file <" + objects + ">")
 
 	objectsReference = {}
 	pat = re.compile("(\d+)(\ +)(\d+)")
@@ -47,7 +47,7 @@ def printStats(log, objectsReference):
 	try:
 		fin = open(log, 'r')
 	except:
-		sys.exit("Error: While opening file <" + log + ">")
+		sys.exit("Error2: While opening file <" + log + ">")
 
 
 	hits = 0
