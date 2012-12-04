@@ -1,0 +1,17 @@
+placementFile placement.in
+websiteFile website.in
+trafficFile traffic.in
+numClients 250
+simulationLength 3000
+requestInterval 1
+p2pContributionPercentage .3
+p2pContributionPattern 2
+segmentSizeInBytes 10000
+numFiles 3
+300
+300
+300
+numCDNServers 1
+serverStoragePercentage .7
+seedRate .2
+seedRatio .3

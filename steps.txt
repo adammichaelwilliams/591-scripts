@@ -1,0 +1,18 @@
+svn co svn+ssh://adamwill@sftp.itd.umich.edu/afs/umich.edu/user/a/t/atami/591repo
+
+/stats.sh /CDNsim/output/inputgentest /CDNsim/CDNsim/CDNsimstats/stats.py /CDNsim/CDNsim/CDNsimstats/util.py
+
+Create bottle 
+python /CDNsim/CDNsim/CDNsimgui/CDNsim_cmd.py {{BOTTLE_NAME}}
+
+Go to
+cd /CDNsim/output/{{BOTTLE_NAME}}/
+
+Run
+./batch.sh ./
+
+run
+/CDNsim/CDNsim/CDNsimstats/stats.sh /CDNsim/output/{{BOTTLE_NAME}} /CDNsim/CDNsim/CDNsimstats/stats.py /CDNsim/CDNsim/CDNsimstats/util.py
+
+
+
